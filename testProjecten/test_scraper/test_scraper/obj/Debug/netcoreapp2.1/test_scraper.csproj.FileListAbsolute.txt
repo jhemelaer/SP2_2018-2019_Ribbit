@@ -1,0 +1,11 @@
+C:\Users\Hasan\source\repos\test_scraper\test_scraper\bin\Debug\netcoreapp2.1\test_scraper.deps.json
+C:\Users\Hasan\source\repos\test_scraper\test_scraper\bin\Debug\netcoreapp2.1\test_scraper.runtimeconfig.json
+C:\Users\Hasan\source\repos\test_scraper\test_scraper\bin\Debug\netcoreapp2.1\test_scraper.runtimeconfig.dev.json
+C:\Users\Hasan\source\repos\test_scraper\test_scraper\bin\Debug\netcoreapp2.1\test_scraper.dll
+C:\Users\Hasan\source\repos\test_scraper\test_scraper\obj\Debug\netcoreapp2.1\test_scraper.csprojAssemblyReference.cache
+C:\Users\Hasan\source\repos\test_scraper\test_scraper\obj\Debug\netcoreapp2.1\test_scraper.csproj.CoreCompileInputs.cache
+C:\Users\Hasan\source\repos\test_scraper\test_scraper\obj\Debug\netcoreapp2.1\test_scraper.AssemblyInfoInputs.cache
+C:\Users\Hasan\source\repos\test_scraper\test_scraper\obj\Debug\netcoreapp2.1\test_scraper.AssemblyInfo.cs
+C:\Users\Hasan\source\repos\test_scraper\test_scraper\bin\Debug\netcoreapp2.1\test_scraper.pdb
+C:\Users\Hasan\source\repos\test_scraper\test_scraper\obj\Debug\netcoreapp2.1\test_scraper.dll
+C:\Users\Hasan\source\repos\test_scraper\test_scraper\obj\Debug\netcoreapp2.1\test_scraper.pdb
