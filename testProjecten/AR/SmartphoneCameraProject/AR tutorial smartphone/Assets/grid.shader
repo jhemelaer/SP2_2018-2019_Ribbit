@@ -1,48 +1,67 @@
-﻿Shader "Custom/grid" {
-	Properties {
-		_Color ("Color", Color) = (1,1,1,1)
-		_MainTex ("Albedo (RGB)", 2D) = "white" {}
-		_Glossiness ("Smoothness", Range(0,1)) = 0.5
-		_Metallic ("Metallic", Range(0,1)) = 0.0
+﻿//Bron: https://answers.unity.com/questions/442581/how-to-draw-a-grid-over-parts-of-the-terrain.html
+
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Grid" {
+
+	Properties{
+		_GridThickness("Grid Thickness", Float) = 0.02
+		_GridSpacing("Grid Spacing", Float) = 10.0
+		_GridColor("Grid Color", Color) = (0.5, 0.5, 1.0, 1.0)
+		_OutsideColor("Color Outside Grid", Color) = (0.0, 0.0, 0.0, 0.0)
 	}
-	SubShader {
-		Tags { "RenderType"="Opaque" }
-		LOD 200
-		
+
+		SubShader{
+		Tags{
+		"Queue" = "Transparent"
+		// draw after all opaque geometry has been drawn
+	}
+
+		Pass{
+		ZWrite Off
+		// don't write to depth buffer in order not to occlude other objects
+		Blend SrcAlpha OneMinusSrcAlpha
+		// use alpha blending
+
 		CGPROGRAM
-		// Physically based Standard lighting model, and enable shadows on all light types
-		#pragma surface surf Standard fullforwardshadows
 
-		// Use shader model 3.0 target, to get nicer looking lighting
-		#pragma target 3.0
+#pragma vertex vert  
+#pragma fragment frag 
 
-		sampler2D _MainTex;
+		uniform float _GridThickness;
+	uniform float _GridSpacing;
+	uniform float4 _GridColor;
+	uniform float4 _OutsideColor;
 
-		struct Input {
-			float2 uv_MainTex;
-		};
+	struct vertexInput {
+		float4 vertex : POSITION;
+	};
+	struct vertexOutput {
+		float4 pos : SV_POSITION;
+		float4 worldPos : TEXCOORD0;
+	};
 
-		half _Glossiness;
-		half _Metallic;
-		fixed4 _Color;
+	vertexOutput vert(vertexInput input) {
+		vertexOutput output;
 
-		// Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
-		// See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
-		// #pragma instancing_options assumeuniformscaling
-		UNITY_INSTANCING_CBUFFER_START(Props)
-			// put more per-instance properties here
-		UNITY_INSTANCING_CBUFFER_END
+		output.pos = UnityObjectToClipPos(input.vertex);
+		output.worldPos = mul(unity_ObjectToWorld, input.vertex);
+		// transformation of input.vertex from object coordinates to world coordinates;
+		return output;
+	}
 
-		void surf (Input IN, inout SurfaceOutputStandard o) {
-			// Albedo comes from a texture tinted by color
-			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
-			o.Albedo = c.rgb;
-			// Metallic and smoothness come from slider variables
-			o.Metallic = _Metallic;
-			o.Smoothness = _Glossiness;
-			o.Alpha = c.a;
+	float4 frag(vertexOutput input) : COLOR{
+		if (frac(input.worldPos.x / _GridSpacing) < _GridThickness
+		|| frac(input.worldPos.y / _GridSpacing) < _GridThickness) {
+			return _GridColor;
 		}
+		else {
+			return _OutsideColor;
+		}
+	}
+
 		ENDCG
 	}
-	FallBack "Diffuse"
+	}
 }
