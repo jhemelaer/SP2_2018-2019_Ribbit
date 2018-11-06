@@ -1,0 +1,28 @@
+{
+	"id": "ehb_campus_kaai",
+	"name": "Erasmus Hoge School Brussel Campus Kaai",
+	"owner": "Erasmus Hoge School Brussel",
+	"location": {
+		"type": "Point",
+		"coordinates": [4.3206193, 50.842239]
+	},
+	"levels": [{
+		"id": "ehb-campus-kaai-level-0",
+		"name": "0",
+		"readable_name": "Ground floor",
+		"z_order": 0,
+		"filename": "indoor-map-level0.geojson"
+	},
+		"id": "ehb-campus-kaai-level-1",
+		"name": "1",
+		"readable_name": "First floor",
+		"z_order": 1,
+		"filename": "indoor-map-level1.geojson"
+	},
+		"id": "ehb-campus-kaai-level-2",
+		"name": "2",
+		"readable_name": "second floor",
+		"z_order": 2,
+		"filename": "indoor-map-level2.geojson"
+	]
+}
