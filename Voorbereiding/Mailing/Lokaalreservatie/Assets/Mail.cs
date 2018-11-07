@@ -16,6 +16,7 @@ public class Mail : MonoBehaviour
 
     public InputField naam;
     public InputField lokaal;
+    public Toggle[] toggles;
 
     public void sendmail_start()
     {
