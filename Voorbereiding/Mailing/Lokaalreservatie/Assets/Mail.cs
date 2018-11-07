@@ -9,7 +9,10 @@ using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Mail : MonoBehaviour {
+public class Mail : MonoBehaviour
+{
+
+    //Code voormiddag
 
     public InputField naam;
     public InputField lokaal;
@@ -22,7 +25,7 @@ public class Mail : MonoBehaviour {
     public IEnumerator sendmail()
     {
         yield return new WaitForSeconds(0.0f);
-        if(naam.text != "" && lokaal.text != "")
+        if (naam.text != "" && lokaal.text != "")
         {
             MailMessage mail = new MailMessage();
 
@@ -38,14 +41,4 @@ public class Mail : MonoBehaviour {
             smtpServer.Send(mail);
         }
     }
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
