@@ -16,7 +16,9 @@ public class Mail : MonoBehaviour
 
     public InputField naam;
     public InputField lokaal;
-    public Toggle[] toggles;
+    public Toggle isStudent;
+    public Toggle isDocent;
+    public string rol;
 
     public void sendmail_start()
     {
@@ -28,12 +30,24 @@ public class Mail : MonoBehaviour
         yield return new WaitForSeconds(0.0f);
         if (naam.text != "" && lokaal.text != "")
         {
+            if (isStudent.isOn)
+            {
+                rol = "Student";
+            }
+            else if (isDocent.isOn)
+            {
+                rol = "Docent";
+            }
+            else
+            {
+                rol = "(Rol onbekend)";
+            }
             MailMessage mail = new MailMessage();
 
             mail.From = new MailAddress("test@demo.com");
             mail.To.Add("ribbitsoftwareproject@gmail.com");
             mail.Subject = "Aanvraag lokaalreservatie " + lokaal.text;
-            mail.Body = naam.text + " heeft gevraagd om lokaal " + lokaal.text + " te reserveren.";
+            mail.Body = rol + " " + naam.text + " heeft gevraagd om lokaal " + lokaal.text + " te reserveren.";
             SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
             smtpServer.Port = 587;
             smtpServer.Credentials = new System.Net.NetworkCredential("ribbitsoftwareproject@gmail.com", "ribbit2018") as ICredentialsByHost;
