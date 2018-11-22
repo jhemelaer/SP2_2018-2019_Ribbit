@@ -4,5 +4,9 @@ testProjecten/gui/Menu/Library/CurrentLayout.dwlt
 *.dwlt
 *.lock
 *.meta
+*.dwlt
+*.mdb
+*AssetDatabase3
+*/metadata/*
 *\meta*
 *.dwlt
