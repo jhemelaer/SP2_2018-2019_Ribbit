@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class ContactButtonController : MonoBehaviour {
 
-  
+    public void goToContact()
+    {
+        SceneManager.LoadScene("ContactUsScene");
+    }
 
-//overige functies mogen er bij
+
 
 }
