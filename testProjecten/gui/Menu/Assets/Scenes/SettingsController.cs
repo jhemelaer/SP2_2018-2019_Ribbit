@@ -18,7 +18,7 @@ public class SettingsController : MonoBehaviour {
     {
         if (location.isOn)
         {
-    locateMeButtonController.LocateMe_Click();
+    locateMeButtonController.LocateMe();
         }
     }
 public void ActiveNFC()
