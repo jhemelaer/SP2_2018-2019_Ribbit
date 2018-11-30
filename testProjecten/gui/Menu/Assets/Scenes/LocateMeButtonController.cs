@@ -5,7 +5,7 @@ using UnityEngine;
 public class LocateMeButtonController : MonoBehaviour {
 
   
-public IEnumerator LocateMe_Click(){
+public IEnumerator LocateMe(){
         //gps location bron: https://docs.unity3d.com/ScriptReference/LocationService.Start.html
         // First, check if user has location service enabled
         if (!Input.location.isEnabledByUser)
