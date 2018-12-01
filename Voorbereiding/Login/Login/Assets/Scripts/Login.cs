@@ -1,5 +1,6 @@
 ﻿//Bronnen:
 // https://www.youtube.com/watch?v=vFs0_skd0E4
+// https://www.youtube.com/watch?v=FBo9OdEF_D4
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,7 +22,34 @@ public class Login : MonoBehaviour {
 
     public void LoginKnop()
     {
-        Debug.Log("Login knop ingedrukt");
+        bool GN = false;
+        bool WW = false;
+
+        if(Gebruikersnaam == "Jef") // Als de gebruikersnaam voorkomt in de Active Directory. Moet nog geïmplementeerd worden.
+        {
+            GN = true;
+        }
+        else
+        {
+            Debug.LogWarning("Deze gebruikersnaam kont niet voor in ons systeem");
+        }
+
+        if(Wachtwoord != "")
+        {
+            if(Wachtwoord == "Jefzijnwachtwoord") // Moet nog geïmplementerd worden.
+            {
+                WW = true;
+            }
+            else
+            {
+                Debug.LogWarning("Deze combinatie van gebruikersnnaam en wachtwoord is niet correct");
+            }
+        }
+
+        if(GN == true && WW == true)
+        {
+            Debug.LogWarning("U bent ingelogd");
+        }
     }
 	
 	// Update is called once per frame
