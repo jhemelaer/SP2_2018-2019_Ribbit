@@ -49,6 +49,7 @@ public class Login : MonoBehaviour {
         if(GN == true && WW == true)
         {
             Debug.LogWarning("U bent ingelogd");
+            //Implementeer hier een verwijzing naar het correcte menu (voorlopig enkel het studentenmenu).
         }
     }
 	
