@@ -13,20 +13,8 @@ namespace AD_test2
     {
         // Nodig voor het uitvoeren van de query's
         public DirectorySearcher dirSearch = null;
-        static void Main(string[] args)
-        {
-            //   //Creating a directory entry object by passing LDAP address
-            //       string ldapadres = "LDAP://10.3.50.7";
-            //     string gebruikersnaam = "admin1";
-            //   string wachtwoord = "Rej47!";
-            //       string searchBaseStudenten = "ou= gebruikers, ou = studenten";
-            //     string searchBaseDocenten = "ou= gebruikers, ou = personeel";
-            //   DirectoryEntry de = new DirectoryEntry(ldapadres, gebruikersnaam, wachtwoord);
-            // DirectorySearcher ds = new DirectorySearcher(de);
-            // ds.SearchScope = SearchScope.Subtree;
-        }
 
-       public void queryAD()
+        public void queryAD()
         {
             string Gebruikersnaam = "malke.boulanger";
             string Wachtwoord = "Puc55!";
@@ -36,7 +24,7 @@ namespace AD_test2
 
             rs = searchUser(GetDirectorySearcher(Gebruikersnaam, Wachtwoord, domein), Gebruikersnaam);
 
-            if(rs != null)
+            if (rs != null)
             {
                 Console.WriteLine("Er werd een gebruiker met deze gegevens gevonden");
             }
@@ -44,15 +32,15 @@ namespace AD_test2
 
         private DirectorySearcher GetDirectorySearcher(string gebruikersnaam, string wachtwoord, string domein)
         {
-            if(dirSearch == null)
+            if (dirSearch == null)
             {
                 try
                 {
                     // De klasse DirectorySearcher zal de query's uitvoeren.
                     //Het object zal gereturned worden om nadien gebruikt te worden in de searchBy-methode.
-                    dirSearch = new DirectorySearcher(new DirectoryEntry("LDAP://" + domein + gebruikersnaam + wachtwoord));
+                    dirSearch = new DirectorySearcher(new DirectoryEntry("LDAP://" + domein, gebruikersnaam, wachtwoord));
                 }
-                catch(DirectoryServicesCOMException e)
+                catch (DirectoryServicesCOMException e)
                 {
                     Console.WriteLine("Er is iets verkeerd gelopen bij het maken van de verbinding: " + e.Message.ToString()); //Vervangen door Debug.Log
                 }
@@ -73,7 +61,7 @@ namespace AD_test2
 
             SearchResult userObject = ds.FindOne();
 
-            if(userObject != null)
+            if (userObject != null)
             {
                 return userObject;
             }
@@ -82,5 +70,12 @@ namespace AD_test2
                 return null;
             }
         }
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            program.queryAD();
+        }
+
+       
     }
 }
