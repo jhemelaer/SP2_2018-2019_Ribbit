@@ -32,13 +32,15 @@ namespace AD_test2
 
         private DirectorySearcher GetDirectorySearcher(string gebruikersnaam, string wachtwoord, string domein)
         {
+            DirectoryEntry de = new DirectoryEntry("LDAP://" + domein, gebruikersnaam, wachtwoord);
+            de.RefreshCache();
             if (dirSearch == null)
             {
                 try
                 {
                     // De klasse DirectorySearcher zal de query's uitvoeren.
                     //Het object zal gereturned worden om nadien gebruikt te worden in de searchBy-methode.
-                    dirSearch = new DirectorySearcher(new DirectoryEntry("LDAP://" + domein, gebruikersnaam, wachtwoord));
+                    dirSearch = new DirectorySearcher(de);
                 }
                 catch (DirectoryServicesCOMException e)
                 {
