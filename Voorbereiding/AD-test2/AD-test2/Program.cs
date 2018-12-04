@@ -34,10 +34,15 @@ namespace AD_test2
 
             SearchResult rs = null;
 
-            rs = searchUser(GetDirectorySearcher(Gebruikersnaam, Wachtwoord, domein), txtSearchUser.Text.Trim());
+            rs = searchUser(GetDirectorySearcher(Gebruikersnaam, Wachtwoord, domein), Gebruikersnaam);
+
+            if(rs != null)
+            {
+                Console.WriteLine("Er werd een gebruiker met deze gegevens gevonden");
+            }
         }
 
-        private DirectorySearcher GetDirectory(string gebruikersnaam, string wachtwoord, string domein)
+        private DirectorySearcher GetDirectorySearcher(string gebruikersnaam, string wachtwoord, string domein)
         {
             if(dirSearch == null)
             {
