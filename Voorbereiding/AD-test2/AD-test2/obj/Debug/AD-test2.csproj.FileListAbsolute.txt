@@ -1,0 +1,7 @@
+C:\Users\Jordi Hemelaer\Documents\EhB\Academiejaar 2018-2019\SP2_2018-2019_Ribbit\Voorbereiding\AD-test2\AD-test2\bin\Debug\AD-test2.exe.config
+C:\Users\Jordi Hemelaer\Documents\EhB\Academiejaar 2018-2019\SP2_2018-2019_Ribbit\Voorbereiding\AD-test2\AD-test2\bin\Debug\AD-test2.exe
+C:\Users\Jordi Hemelaer\Documents\EhB\Academiejaar 2018-2019\SP2_2018-2019_Ribbit\Voorbereiding\AD-test2\AD-test2\bin\Debug\AD-test2.pdb
+C:\Users\Jordi Hemelaer\Documents\EhB\Academiejaar 2018-2019\SP2_2018-2019_Ribbit\Voorbereiding\AD-test2\AD-test2\obj\Debug\AD-test2.csprojResolveAssemblyReference.cache
+C:\Users\Jordi Hemelaer\Documents\EhB\Academiejaar 2018-2019\SP2_2018-2019_Ribbit\Voorbereiding\AD-test2\AD-test2\obj\Debug\AD-test2.csproj.CoreCompileInputs.cache
+C:\Users\Jordi Hemelaer\Documents\EhB\Academiejaar 2018-2019\SP2_2018-2019_Ribbit\Voorbereiding\AD-test2\AD-test2\obj\Debug\AD-test2.exe
+C:\Users\Jordi Hemelaer\Documents\EhB\Academiejaar 2018-2019\SP2_2018-2019_Ribbit\Voorbereiding\AD-test2\AD-test2\obj\Debug\AD-test2.pdb
