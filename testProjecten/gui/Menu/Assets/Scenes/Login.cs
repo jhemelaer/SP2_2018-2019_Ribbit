@@ -51,7 +51,7 @@ public class Login : MonoBehaviour {
         {
             Debug.LogWarning("U bent ingelogd");
 			//redirect naar studentenmenu
-				 SceneManager.LoadScene("MenuStudentScene");
+            SceneManager.LoadScene("MenuStudentScene");
         }
     }
 	
