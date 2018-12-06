@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="MarkerA.1.103" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerA.1.StudentSec" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerA.1.105" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerA.1.A5" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerA.1.A6" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerA.1.Bilblio" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerA.1.A7" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerA.1.Stairs1" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerA.1.Stairs2" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerA.1.Hall1" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerA.1.Hall2" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerA.1.Hall3" size="10.000000 13.297873" />
+	
+	<ImageTarget name="MarkerB.1.Stairs1" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerB.1.Stairs2" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerB.1.101" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerB.1.102" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerB.1.108" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerB.1.103" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerB.1.Hall1" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerB.1.Hall2" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerB.1.Hall3" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerB.1.Hall4" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerB.1.Hall5" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerB.1.Hall6" size="10.000000 13.297873" />
+	<ImageTarget name="MarkerC.1.Stairs1" size="10.000000 13.297873" />
+ 
+  </Tracking>
+</QCARConfig>
