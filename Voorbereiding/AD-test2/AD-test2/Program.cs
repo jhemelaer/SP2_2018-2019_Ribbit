@@ -18,7 +18,7 @@ namespace AD_test2
         {
             string Gebruikersnaam = "malke.boulanger";
             string Wachtwoord = "Puc55!";
-            string domein = "ehbstudent.local";
+            string domein = "10.3.50.7";
 
             SearchResult rs = null;
 
@@ -65,6 +65,7 @@ namespace AD_test2
 
             if (userObject != null)
             {
+                Console.WriteLine("Er werd een user gevonden!");
                 return userObject;
             }
             else
