@@ -8,6 +8,7 @@ using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Mail : MonoBehaviour
 {
@@ -55,5 +56,10 @@ public class Mail : MonoBehaviour
             ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
             smtpServer.Send(mail);
         }
+    }
+
+    public void onClick()
+    {
+        SceneManager.LoadScene("MenuStudentScene");
     }
 }
