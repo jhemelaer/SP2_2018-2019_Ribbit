@@ -19,7 +19,7 @@ namespace AD_test2
             string Gebruikersnaam = "admin1";
             string Wachtwoord = "Rej47!";
             string domein = "10.3.50.7";
-            string gb = "malke.boulanger"; // genruikersnaam van te vinden user
+            string gb = "malke.boulanger"; // gebruikersnaam van te vinden user
             string ww = "Puc55!"; // wachtwoord van te vinden user
 
             SearchResult rs = null;
