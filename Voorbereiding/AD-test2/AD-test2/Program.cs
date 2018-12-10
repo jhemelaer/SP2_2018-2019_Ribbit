@@ -16,13 +16,15 @@ namespace AD_test2
 
         public void queryAD()
         {
-            string Gebruikersnaam = "malke.boulanger";
-            string Wachtwoord = "Puc55!";
+            string Gebruikersnaam = "admin1";
+            string Wachtwoord = "Rej47!";
             string domein = "10.3.50.7";
+            string gb = "malke.boulanger"; // genruikersnaam van te vinden user
+            string ww = "Puc55!"; // wachtwoord van te vinden user
 
             SearchResult rs = null;
 
-            rs = searchUser(GetDirectorySearcher(Gebruikersnaam, Wachtwoord, domein), Gebruikersnaam);
+            rs = searchUser(GetDirectorySearcher(Gebruikersnaam, Wachtwoord, domein), gb);
 
             if (rs != null)
             {
