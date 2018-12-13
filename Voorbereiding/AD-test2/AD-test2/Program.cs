@@ -35,6 +35,7 @@ namespace AD_test2
         private DirectorySearcher GetDirectorySearcher(string gebruikersnaam, string wachtwoord, string domein)
         {
             DirectoryEntry de = new DirectoryEntry("LDAP://" + domein, gebruikersnaam, wachtwoord);
+
             de.RefreshCache();
             if (dirSearch == null)
             {
@@ -58,7 +59,7 @@ namespace AD_test2
 
         private SearchResult searchUser(DirectorySearcher ds, string Gebruikersnaam)
         {
-            ds.Filter = "(&((&(objectCategory=gebruikers)(objectClass=studenten)))(samaccountname=" + Gebruikersnaam + "))";
+            ds.Filter = "(&((&(objectCategory=CN=Person,CN=Schema,CN=Configuration,DC=ehbstudent,DC=local)(objectClass=user)))(samaccountname=" + Gebruikersnaam + "))";
 
             ds.SearchScope = SearchScope.Subtree;
             ds.ServerTimeLimit = TimeSpan.FromSeconds(90);
