@@ -63,12 +63,14 @@ namespace AD_test2
 
             ds.SearchScope = SearchScope.Subtree;
             ds.ServerTimeLimit = TimeSpan.FromSeconds(90);
-
+            Console.WriteLine(ds.FindAll().Count);
             SearchResult userObject = ds.FindOne();
 
             if (userObject != null)
             {
                 Console.WriteLine("Er werd een user gevonden!");
+                Console.WriteLine(userObject.GetDirectoryEntry().Name);
+               // Console.WriteLine(userObject.GetDirectoryEntry().Password);
                 return userObject;
             }
             else
