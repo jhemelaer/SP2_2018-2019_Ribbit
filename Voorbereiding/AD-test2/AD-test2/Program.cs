@@ -1,5 +1,6 @@
 ﻿//Bronnen: https://www.youtube.com/watch?v=9iRs71ovZ_U&t=64s,
 //https://myjeeva.com/querying-active-directory-using-csharp.html#blog
+// https://stackoverflow.com/questions/1091115/active-directory-display-all-properties-in-a-table
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,9 @@ namespace AD_test2
     {
         // Nodig voor het uitvoeren van de query's
         public DirectorySearcher dirSearch = null;
+
+        string GN;
+        string WWUser;
 
         public void queryAD()
         {
@@ -63,14 +67,13 @@ namespace AD_test2
 
             ds.SearchScope = SearchScope.Subtree;
             ds.ServerTimeLimit = TimeSpan.FromSeconds(90);
-            Console.WriteLine(ds.FindAll().Count);
             SearchResult userObject = ds.FindOne();
 
             if (userObject != null)
             {
                 Console.WriteLine("Er werd een user gevonden!");
-                Console.WriteLine(userObject.GetDirectoryEntry().Name);
-               // Console.WriteLine(userObject.GetDirectoryEntry().Password);
+                GN = userObject.GetDirectoryEntry().Name;
+                // WWUser = userObject.GetDirectoryEntry();
                 return userObject;
             }
             else
