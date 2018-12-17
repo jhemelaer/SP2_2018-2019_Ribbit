@@ -1,0 +1,7 @@
+C:\Users\Jordi Hemelaer\source\repos\AD3\AD3\obj\Debug\AD3.csprojResolveAssemblyReference.cache
+C:\Users\Jordi Hemelaer\source\repos\AD3\AD3\obj\Debug\AD3.csproj.CoreCompileInputs.cache
+C:\Users\Jordi Hemelaer\source\repos\AD3\AD3\bin\Debug\AD3.exe.config
+C:\Users\Jordi Hemelaer\source\repos\AD3\AD3\bin\Debug\AD3.exe
+C:\Users\Jordi Hemelaer\source\repos\AD3\AD3\bin\Debug\AD3.pdb
+C:\Users\Jordi Hemelaer\source\repos\AD3\AD3\obj\Debug\AD3.exe
+C:\Users\Jordi Hemelaer\source\repos\AD3\AD3\obj\Debug\AD3.pdb

@@ -1,5 +1,6 @@
 ﻿//Bronnen: https://www.youtube.com/watch?v=9iRs71ovZ_U&t=64s,
 //https://myjeeva.com/querying-active-directory-using-csharp.html#blog
+// https://stackoverflow.com/questions/1091115/active-directory-display-all-properties-in-a-table
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,15 +15,20 @@ namespace AD_test2
         // Nodig voor het uitvoeren van de query's
         public DirectorySearcher dirSearch = null;
 
+        string GN;
+        string WWUser;
+
         public void queryAD()
         {
-            string Gebruikersnaam = "malke.boulanger";
-            string Wachtwoord = "Puc55!";
+            string Gebruikersnaam = "admin1";
+            string Wachtwoord = "Rej47!";
             string domein = "10.3.50.7";
+            string gb = "malke.boulanger"; // gebruikersnaam van te vinden user
+            string ww = "Puc55!"; // wachtwoord van te vinden user
 
             SearchResult rs = null;
 
-            rs = searchUser(GetDirectorySearcher(Gebruikersnaam, Wachtwoord, domein), Gebruikersnaam);
+            rs = searchUser(GetDirectorySearcher(Gebruikersnaam, Wachtwoord, domein), gb);
 
             if (rs != null)
             {
@@ -33,6 +39,7 @@ namespace AD_test2
         private DirectorySearcher GetDirectorySearcher(string gebruikersnaam, string wachtwoord, string domein)
         {
             DirectoryEntry de = new DirectoryEntry("LDAP://" + domein, gebruikersnaam, wachtwoord);
+
             de.RefreshCache();
             if (dirSearch == null)
             {
@@ -56,16 +63,17 @@ namespace AD_test2
 
         private SearchResult searchUser(DirectorySearcher ds, string Gebruikersnaam)
         {
-            ds.Filter = "(&((&(objectCategory=gebruikers)(objectClass=studenten)))(samaccountname=" + Gebruikersnaam + "))";
+            ds.Filter = "(&((&(objectCategory=CN=Person,CN=Schema,CN=Configuration,DC=ehbstudent,DC=local)(objectClass=user)))(samaccountname=" + Gebruikersnaam + "))";
 
             ds.SearchScope = SearchScope.Subtree;
             ds.ServerTimeLimit = TimeSpan.FromSeconds(90);
-
             SearchResult userObject = ds.FindOne();
 
             if (userObject != null)
             {
                 Console.WriteLine("Er werd een user gevonden!");
+                GN = userObject.GetDirectoryEntry().Name;
+                // WWUser = userObject.GetDirectoryEntry();
                 return userObject;
             }
             else

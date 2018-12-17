@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scenes\Mail.cs" />
     <Compile Include="Assets\Scenes\MijnLessenroosterController.cs" />
     <Compile Include="Assets\Scenes\NavigateButtonController.cs" />
+    <Compile Include="Assets\Scenes\Persoon.cs" />
     <Compile Include="Assets\Scenes\SettingsButtonController.cs" />
     <Compile Include="Assets\Scenes\SettingsController.cs" />
   </ItemGroup>
