@@ -15,6 +15,8 @@ public class Login : MonoBehaviour {
     private string Gebruikersnaam;
     private string Wachtwoord;
     private string form;
+    private Dictionary<string, string> studentenGegevens = new Dictionary<string, string>();
+    private Dictionary<string, string> docentenGegevens = new Dictionary<string, string>();
 
 	// Use this for initialization
 	void Start () {
@@ -26,32 +28,39 @@ public class Login : MonoBehaviour {
         bool GN = false;
         bool WW = false;
 
-        if(Gebruikersnaam == "Jef") // Als de gebruikersnaam voorkomt in de Active Directory. Moet nog geïmplementeerd worden.
+        studentenGegevens.Add("malke.boulanger", "Puc55!");
+        studentenGegevens.Add("kKarle.claretha", "Avi15!");
+        studentenGegevens.Add("jeraldine.omara", "Juq59!");
+        studentenGegevens.Add("krista.vreeland", "Jas08!");
+
+        docentenGegevens.Add("rein.swager", "Ewa35!");
+        docentenGegevens.Add("raza.mets", "Eke14!");
+        docentenGegevens.Add("ona.dejonge", "Lxu54!");
+
+        foreach(KeyValuePair<string, string> entry in studentenGegevens)
         {
-            GN = true;
-        }
-        else
-        {
-            Debug.LogWarning("Deze gebruikersnaam kont niet voor in ons systeem");
+            if (entry.Key == Gebruikersnaam && entry.Value == Wachtwoord)
+            {
+                Persoon gebruiker = new Persoon();
+                gebruiker.setNaam(entry.Key);
+                gebruiker.setType(Type.STUDENT);
+
+                //redirect naar studentenmenu
+                SceneManager.LoadScene("MenuStudentScene");
+            }
         }
 
-        if(Wachtwoord != "")
+        foreach(KeyValuePair<string, string> entry in docentenGegevens)
         {
-            if(Wachtwoord == "Jefzijnwachtwoord") // Moet nog geïmplementerd worden.
+            if(entry.Key == Gebruikersnaam && entry.Value == Wachtwoord)
             {
-                WW = true;
-            }
-            else
-            {
-                Debug.LogWarning("Deze combinatie van gebruikersnnaam en wachtwoord is niet correct");
-            }
-        }
+                Persoon gebruiker = new Persoon();
+                gebruiker.setNaam(entry.Key);
+                gebruiker.setType(Type.DOCENT);
 
-        if(GN == true && WW == true)
-        {
-            Debug.LogWarning("U bent ingelogd");
-			//redirect naar studentenmenu
-            SceneManager.LoadScene("MenuStudentScene");
+                //redirect naar docentenmenu
+                SceneManager.LoadScene("MenuDocentScene");
+            }
         }
     }
 	
