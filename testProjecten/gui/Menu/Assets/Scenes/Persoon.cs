@@ -2,30 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Type { STUDENT, DOCENT };
+public enum Type { STUDENT, DOCENT, NIET_INGELOGD };
 
 public class Persoon
 {
-    private string naam;
-    public Type typeUser;
-
-    public string getNaam()
-    {
-        return this.naam;
-    }
-
-    public void setNaam(string naam)
-    {
-        this.naam = naam;
-    }
-
-    public Type getType()
-    {
-        return typeUser;
-    }
-
-    public void setType(Type type)
-    {
-        typeUser = type;
-    }
+    public static string naam;
+    public static Type typeUser { get; set; }
 }
