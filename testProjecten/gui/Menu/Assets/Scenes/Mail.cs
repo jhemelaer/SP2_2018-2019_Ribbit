@@ -20,6 +20,8 @@ public class Mail : MonoBehaviour
     public Toggle isStudent;
     public Toggle isDocent;
     public string rol;
+    public string naamGebruiker;
+    public string aangevraagdLokaal;
 
     public void sendmail_start()
     {
@@ -29,26 +31,28 @@ public class Mail : MonoBehaviour
     public IEnumerator sendmail()
     {
         yield return new WaitForSeconds(0.0f);
-        if (naam.text != "" && lokaal.text != "")
+       
+        if(Persoon.naam == "" || Persoon.naam == null || Persoon.typeUser == Type.NIET_INGELOGD)
         {
-            if (isStudent.isOn)
+            SceneManager.LoadScene("LoginScene");
+        }
+
+        if(Persoon.naam != "" && Persoon.naam != null && Persoon.typeUser != Type.NIET_INGELOGD)
+        {
+            naamGebruiker = Persoon.naam;
+            rol = Persoon.typeUser.ToString();
+
+            if(lokaal.text != "" && lokaal.text != null)
             {
-                rol = "Student";
+               aangevraagdLokaal = lokaal.text;
             }
-            else if (isDocent.isOn)
-            {
-                rol = "Docent";
-            }
-            else
-            {
-                rol = "(Rol onbekend)";
-            }
+
             MailMessage mail = new MailMessage();
 
             mail.From = new MailAddress("test@demo.com");
             mail.To.Add("ribbitsoftwareproject@gmail.com");
-            mail.Subject = "Aanvraag lokaalreservatie " + lokaal.text;
-            mail.Body = rol + " " + naam.text + " heeft gevraagd om lokaal " + lokaal.text + " te reserveren.";
+            mail.Subject = "Aanvraag lokaalreservatie " + aangevraagdLokaal;
+            mail.Body = rol + " " + naamGebruiker + " heeft gevraagd om lokaal " + aangevraagdLokaal + " te reserveren.";
             SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
             smtpServer.Port = 587;
             smtpServer.Credentials = new System.Net.NetworkCredential("ribbitsoftwareproject@gmail.com", "ribbit2018") as ICredentialsByHost;

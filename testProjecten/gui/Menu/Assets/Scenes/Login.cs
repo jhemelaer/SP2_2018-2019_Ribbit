@@ -18,15 +18,13 @@ public class Login : MonoBehaviour {
     private Dictionary<string, string> studentenGegevens = new Dictionary<string, string>();
     private Dictionary<string, string> docentenGegevens = new Dictionary<string, string>();
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 
     public void LoginKnop()
     {
-        bool GN = false;
-        bool WW = false;
 
         studentenGegevens.Add("malke.boulanger", "Puc55!");
         studentenGegevens.Add("kKarle.claretha", "Avi15!");
@@ -37,26 +35,24 @@ public class Login : MonoBehaviour {
         docentenGegevens.Add("raza.mets", "Eke14!");
         docentenGegevens.Add("ona.dejonge", "Lxu54!");
 
-        foreach(KeyValuePair<string, string> entry in studentenGegevens)
+        foreach (KeyValuePair<string, string> entry in studentenGegevens)
         {
             if (entry.Key == Gebruikersnaam && entry.Value == Wachtwoord)
             {
-                Persoon gebruiker = new Persoon();
-                gebruiker.setNaam(entry.Key);
-                gebruiker.setType(Type.STUDENT);
+                Persoon.naam = entry.Key;
+                Persoon.typeUser = Type.STUDENT;
 
                 //redirect naar studentenmenu
                 SceneManager.LoadScene("MenuStudentScene");
             }
         }
 
-        foreach(KeyValuePair<string, string> entry in docentenGegevens)
+        foreach (KeyValuePair<string, string> entry in docentenGegevens)
         {
-            if(entry.Key == Gebruikersnaam && entry.Value == Wachtwoord)
+            if (entry.Key == Gebruikersnaam && entry.Value == Wachtwoord)
             {
-                Persoon gebruiker = new Persoon();
-                gebruiker.setNaam(entry.Key);
-                gebruiker.setType(Type.DOCENT);
+                Persoon.naam = entry.Key;
+                Persoon.typeUser = Type.DOCENT;
 
                 //redirect naar docentenmenu
                 SceneManager.LoadScene("MenuDocentScene");
