@@ -12,13 +12,7 @@ using UnityEngine.SceneManagement;
 
 public class Mail : MonoBehaviour
 {
-
-    //Code voormiddag
-
-    public InputField naam;
     public InputField lokaal;
-    public Toggle isStudent;
-    public Toggle isDocent;
     public string rol;
     public string naamGebruiker;
     public string aangevraagdLokaal;
