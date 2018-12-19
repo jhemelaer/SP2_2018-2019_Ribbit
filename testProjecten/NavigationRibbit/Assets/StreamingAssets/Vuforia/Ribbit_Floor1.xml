@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="markerReceptie" size="2.000000 2.122205" />
+    <ImageTarget name="markerParking2" size="20.000000 11.137112" />
+    <ImageTarget name="markerParking1" size="6.000000 5.325000" />
+    <ImageTarget name="markerMedialab" size="1.600000 1.938720" />
+    <ImageTarget name="markerFablab" size="2.000000 2.108227" />
+    <ImageTarget name="markerC_0_Uitgang" size="2.000000 2.566617" />
+    <ImageTarget name="markerC_0_Stairs2" size="1.200000 1.514347" />
+    <ImageTarget name="markerC_0_Stairs1" size="2.100000 3.441715" />
+    <ImageTarget name="markerC_0_Resto" size="1.900000 2.960173" />
+    <ImageTarget name="markerC_0_Ingang" size="2.100000 2.538093" />
+    <ImageTarget name="markerC_0_Hall2" size="1.800000 2.251790" />
+    <ImageTarget name="markerC_0_Hall1" size="2.000000 2.704579" />
+    <ImageTarget name="markerB_UitgangFablab" size="2.000000 2.539918" />
+    <ImageTarget name="markerB_Outdoor2" size="2.300000 2.009331" />
+    <ImageTarget name="markerB_Outdoor1" size="2.300000 2.454670" />
+    <ImageTarget name="markerB_Fablab2" size="2.000000 2.266277" />
+    <ImageTarget name="markerB_0_Uitgang1" size="3.000000 3.039691" />
+    <ImageTarget name="markerB_0_Uigangtrap" size="1.800000 2.744071" />
+    <ImageTarget name="markerB_0_Uigang2" size="2.000000 3.036547" />
+    <ImageTarget name="markerB_0_StairsUitgang" size="2.000000 3.113996" />
+    <ImageTarget name="markerB_0_Stairs2" size="1.500000 2.440561" />
+    <ImageTarget name="markerB_0_Stairs1" size="0.800000 1.329178" />
+    <ImageTarget name="markerB_0_Hall5" size="1.400000 2.581757" />
+    <ImageTarget name="markerB_0_Hall4" size="2.000000 2.125984" />
+    <ImageTarget name="markerB_0_Hall3" size="2.000000 2.096293" />
+    <ImageTarget name="markerB_0_Hall2" size="2.000000 2.355424" />
+    <ImageTarget name="markerB_0_Hall1" size="0.900000 1.078694" />
+    <ImageTarget name="markerB_0_055" size="1.800000 2.035501" />
+    <ImageTarget name="markerB_0_002" size="1.200000 1.407829" />
+    <ImageTarget name="markerA_0_Stairs2" size="2.500000 3.219298" />
+    <ImageTarget name="markerA_0_Stairs1" size="1.600000 2.076197" />
+    <ImageTarget name="markerA_0_Ingang" size="2.000000 2.285594" />
+    <ImageTarget name="markerA_0_Hall3" size="1.200000 1.844415" />
+    <ImageTarget name="markerA_0_Hall2" size="2.000000 2.447860" />
+    <ImageTarget name="markerA_0_Hall1" size="5.000000 2.851606" />
+    <ImageTarget name="markerA_0_A4" size="1.800000 2.302497" />
+    <ImageTarget name="markerA_0_A3" size="2.000000 2.178019" />
+    <ImageTarget name="markerA_0_A2" size="2.000000 2.057735" />
+    <ImageTarget name="markerA_0_A1" size="2.000000 2.661931" />
+    <ImageTarget name="markerA_0_011" size="2.000000 3.215284" />
+    <ImageTarget name="markerA_0_001" size="2.000000 2.735555" />
+  </Tracking>
+</QCARConfig>
