@@ -9,81 +9,69 @@ using UnityEngine.SceneManagement;
 using System;
 using System.Text.RegularExpressions;
 
-public class Login : MonoBehaviour
-{
+public class Login : MonoBehaviour {
     public GameObject gebruikersnaam;
     public GameObject wachwtoord;
     private string Gebruikersnaam;
     private string Wachtwoord;
     private string form;
-    private Dictionary<string, string> studentenGegevens = new Dictionary<string, string>();
-    private Dictionary<string, string> docentenGegevens = new Dictionary<string, string>();
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
+	// Use this for initialization
+	void Start () {
+		
+	}
 
     public void LoginKnop()
     {
+        bool GN = false;
+        bool WW = false;
 
-        /* Both dictionaries contain credentials for students and teachers.
-         * Originally, we would work with an Active Directory containing the credentials, but there were some problems with that.
-         * Please read the documents to get the full explenation. */
-
-        studentenGegevens.Add("malke.boulanger", "Puc55!");
-        studentenGegevens.Add("kKarle.claretha", "Avi15!");
-        studentenGegevens.Add("jeraldine.omara", "Juq59!");
-        studentenGegevens.Add("krista.vreeland", "Jas08!");
-
-        docentenGegevens.Add("rein.swager", "Ewa35!");
-        docentenGegevens.Add("raza.mets", "Eke14!");
-        docentenGegevens.Add("ona.dejonge", "Lxu54!");
-
-        foreach (KeyValuePair<string, string> entry in studentenGegevens)
+        if(Gebruikersnaam == "Jef") // Als de gebruikersnaam voorkomt in de Active Directory. Moet nog geïmplementeerd worden.
         {
-            if (entry.Key == Gebruikersnaam && entry.Value == Wachtwoord) // If the credentials correspond to the stored credentials.
-            {
-                Persoon.naam = entry.Key;
-                Persoon.typeUser = Type.STUDENT;
+            GN = true;
+        }
+        else
+        {
+            Debug.LogWarning("Deze gebruikersnaam kont niet voor in ons systeem");
+        }
 
-                //redirect to studentenmenu
-                SceneManager.LoadScene("MenuStudentScene");
+        if(Wachtwoord != "")
+        {
+            if(Wachtwoord == "Jefzijnwachtwoord") // Moet nog geïmplementerd worden.
+            {
+                WW = true;
+            }
+            else
+            {
+                Debug.LogWarning("Deze combinatie van gebruikersnnaam en wachtwoord is niet correct");
             }
         }
 
-        foreach (KeyValuePair<string, string> entry in docentenGegevens)
+        if(GN == true && WW == true)
         {
-            if (entry.Key == Gebruikersnaam && entry.Value == Wachtwoord)
-            {
-                Persoon.naam = entry.Key;
-                Persoon.typeUser = Type.DOCENT;
-
-                //redirect to docentenmenu
-                SceneManager.LoadScene("MenuDocentScene");
-            }
+            Debug.LogWarning("U bent ingelogd");
+			//redirect naar studentenmenu
+				 SceneManager.LoadScene("MenuStudentScene");
         }
     }
-
-    // Update is called once per frame
-    void Update() // Function is used to make the form responsive
-    {
-        if (Input.GetKeyDown(KeyCode.Tab))
+	
+	// Update is called once per frame
+	void Update () {
+        if(Input.GetKeyDown(KeyCode.Tab))
         {
-            if (gebruikersnaam.GetComponent<InputField>().isFocused)
+            if(gebruikersnaam.GetComponent<InputField>().isFocused)
             {
                 wachwtoord.GetComponent<InputField>().Select();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Return))
+        if(Input.GetKeyDown(KeyCode.Return))
         {
-            if (Gebruikersnaam != "" && Wachtwoord != "")
+            if(Gebruikersnaam != "" && Wachtwoord != "")
             {
                 LoginKnop();
             }
         }
         Gebruikersnaam = gebruikersnaam.GetComponent<InputField>().text;
         Wachtwoord = wachwtoord.GetComponent<InputField>().text;
-    }
+	}
 }
