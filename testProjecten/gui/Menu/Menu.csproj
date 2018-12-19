@@ -14,7 +14,6 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
-    <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>5.6.6f2</UnityVersion>
@@ -81,16 +80,15 @@
   <ItemGroup>
     <Compile Include="Assets\Scenes\ContactButtonController.cs" />
     <Compile Include="Assets\Scenes\ContactUsController.cs" />
-    <Compile Include="Assets\Scenes\LessenRoosterFormController.cs" />
     <Compile Include="Assets\Scenes\LocateMeButtonController.cs" />
     <Compile Include="Assets\Scenes\Login.cs" />
     <Compile Include="Assets\Scenes\LokaalReservatieButtonController.cs" />
+    <Compile Include="Assets\Scenes\Mail.cs" />
     <Compile Include="Assets\Scenes\MijnLessenroosterController.cs" />
     <Compile Include="Assets\Scenes\NavigateButtonController.cs" />
+    <Compile Include="Assets\Scenes\Persoon.cs" />
     <Compile Include="Assets\Scenes\SettingsButtonController.cs" />
     <Compile Include="Assets\Scenes\SettingsController.cs" />
-    <Compile Include="Assets\Scenes\TestWWW.cs" />
-    <Compile Include="Assets\Scenes\WWWFormTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
