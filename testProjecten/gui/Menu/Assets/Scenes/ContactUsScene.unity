@@ -297,6 +297,7 @@ GameObject:
   - component: {fileID: 186171000}
   - component: {fileID: 186170999}
   - component: {fileID: 186170998}
+  - component: {fileID: 186171001}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -361,7 +362,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 186170999}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 186171001}
+        m_MethodName: sendmail_start
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &186170999
@@ -397,6 +409,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 186170996}
+--- !u!114 &186171001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 186170996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1b0ba8fcd776844bc45ef74a7df4c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 2065400656}
+  bericht: {fileID: 1054604215}
 --- !u!1 &378281430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,7 +1802,7 @@ MonoBehaviour:
     m_Options:
     - m_Text: AR
       m_Image: {fileID: 0}
-    - m_Text: APP
+    - m_Text: App
       m_Image: {fileID: 0}
     - m_Text: Lessenrooster
       m_Image: {fileID: 0}

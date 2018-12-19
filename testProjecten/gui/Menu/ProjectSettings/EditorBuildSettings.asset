@@ -19,4 +19,7 @@ EditorBuildSettings:
     guid: 9dcc045d3ebb78949ad0636b91e1dd10
   - enabled: 1
     path: Assets/Scenes/LokaalReservatieScene.unity
+    guid: 5b8f1c70fdba25240b173de10d7de7f5
+  - enabled: 1
+    path: Assets/Scenes/ContactUsScene.unity
     guid: 00000000000000000000000000000000
