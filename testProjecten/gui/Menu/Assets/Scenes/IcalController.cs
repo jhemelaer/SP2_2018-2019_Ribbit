@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//videoplayer source: https://docs.unity3d.com/ScriptReference/Video.VideoPlayer.html
 public class IcalController : MonoBehaviour {
     //this function will open your personal timetable on desiderius
 	public void OpenDesiderius () {
@@ -9,8 +11,10 @@ public class IcalController : MonoBehaviour {
     }
 
 
-//this function will open the calender on the device 	
-	public void OpenCalender () {
-		
-	}
+//this function will open the video to set the ical file 	
+	public void StartVideo () {
+        Application.OpenURL("https://youtu.be/KqCFhz_p9Rk");
+    }
+    
+
 }
