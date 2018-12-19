@@ -12,14 +12,20 @@ using UnityEngine.SceneManagement;
 
 public class Mail : MonoBehaviour
 {
+
+    //Code voormiddag
+
+    public InputField naam;
     public InputField lokaal;
+    public Toggle isStudent;
+    public Toggle isDocent;
     public string rol;
     public string naamGebruiker;
     public string aangevraagdLokaal;
 
     public void sendmail_start()
     {
-        StartCoroutine(sendmail()); // A coroutine makes it possible for a function to execute over multiple frames. In fact, a coroutine stops the execution of the code and temporarily gives back control to Unity.
+        StartCoroutine(sendmail());
     }
 
     public IEnumerator sendmail()
@@ -40,8 +46,6 @@ public class Mail : MonoBehaviour
             {
                aangevraagdLokaal = lokaal.text;
             }
-
-            // The next part of code sends us an e-mail
 
             MailMessage mail = new MailMessage();
 

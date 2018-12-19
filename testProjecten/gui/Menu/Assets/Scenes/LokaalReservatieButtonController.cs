@@ -6,8 +6,6 @@ public class LokaalReservatieButtonController : MonoBehaviour {
 
    
        
-public void goToLokaalReservatie()
-    {
-        SceneManager.LoadScene("LokaalReservatieScene");
-    }
+//overige functies mogen er bij
+
 }
