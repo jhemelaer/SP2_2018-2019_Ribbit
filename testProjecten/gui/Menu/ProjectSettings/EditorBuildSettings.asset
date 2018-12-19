@@ -16,4 +16,7 @@ EditorBuildSettings:
     guid: 9dcc045d3ebb78949ad0636b91e1dd10
   - enabled: 1
     path: Assets/Scenes/MenuStudentScene.unity
+    guid: 437dc945ca8274a40b32fe542dd5d06a
+  - enabled: 1
+    path: Assets/Scenes/ContactUsScene.unity
     guid: 00000000000000000000000000000000
