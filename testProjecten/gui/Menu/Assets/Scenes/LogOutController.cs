@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LogOutController : MonoBehaviour {
 
 	// Use this for initialization
-	public void logOut()
+	public void logOut() // The stored user data is removed.
     {
         Persoon.naam = "";
         Persoon.typeUser = Type.NIET_INGELOGD;

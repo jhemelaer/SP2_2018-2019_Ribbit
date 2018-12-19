@@ -20,14 +20,14 @@ public class ContactUsController : MonoBehaviour
     private string categorieString;
     public InputField bericht;
 
-    public void goBack()
+    public void goBack() // Functionality for back-button
     {
         SceneManager.LoadScene("MenuDocentScene");
     }
 
     public void sendmail_start()
     {
-        StartCoroutine(sendmail());
+        StartCoroutine(sendmail()); // A coroutine makes it possible for a function to execute over multiple frames. In fact, a coroutine stops the execution of the code and temporarily gives back control to Unity.
     }
 
     public IEnumerator sendmail()
@@ -35,13 +35,14 @@ public class ContactUsController : MonoBehaviour
         yield return new WaitForSeconds(0.0f);
 
         categorie = dropdown.value;
-        categorieString = mogelijkheden[categorie];
+        categorieString = mogelijkheden[categorie]; // In order to get the right category, the value at the position of "categorie" (dropdown.value returns an int) in the list of categoeries is stored as a string.
 
         if (Persoon.naam == "" || Persoon.naam == null || Persoon.typeUser == Type.NIET_INGELOGD)
         {
             SceneManager.LoadScene("LoginScene");
         }
 
+        // The next part of code sends us an e-mail
         if (categorieString != null && categorieString != "" && Persoon.typeUser != Type.NIET_INGELOGD)
         {
             MailMessage mail = new MailMessage();
