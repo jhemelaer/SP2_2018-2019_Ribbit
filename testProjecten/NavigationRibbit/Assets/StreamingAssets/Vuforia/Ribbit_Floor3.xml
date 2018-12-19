@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="markerC_2_Stairs2" size="2.100000 1.475118" />
+    <ImageTarget name="markerC_2_Stairs1" size="2.000000 1.701372" />
+    <ImageTarget name="markerC_2_209" size="1.800000 1.782560" />
+    <ImageTarget name="markerC_2_208" size="1.800000 1.761828" />
+    <ImageTarget name="markerC_2_206" size="1.500000 1.350219" />
+    <ImageTarget name="markerC_2_205" size="1.800000 1.580102" />
+    <ImageTarget name="markerC_2_204" size="1.600000 1.390089" />
+    <ImageTarget name="markerC_2_203" size="1.400000 1.065648" />
+    <ImageTarget name="markerC_2_202" size="1.400000 1.386818" />
+    <ImageTarget name="markerB_2_Stairs2" size="1.600000 1.712807" />
+    <ImageTarget name="markerB_2_Stairs1" size="1.400000 1.395247" />
+    <ImageTarget name="markerB_2_Hall1" size="2.400000 2.824805" />
+    <ImageTarget name="markerB_2_208" size="1.200000 1.256986" />
+    <ImageTarget name="markerB_2_206" size="0.700000 0.718273" />
+    <ImageTarget name="markerB_2_205" size="0.800000 0.722086" />
+    <ImageTarget name="markerB_2_201" size="0.900000 1.145920" />
+    <ImageTarget name="markerA_2_Stairs2" size="1.200000 1.196490" />
+    <ImageTarget name="markerA_2_Stairs1" size="1.600000 1.407532" />
+    <ImageTarget name="markerA_2_ICT" size="1.000000 1.462201" />
+    <ImageTarget name="markerA_2_Hall1" size="1.200000 1.198603" />
+    <ImageTarget name="markerA_2_Doclandshap" size="1.300000 1.154552" />
+    <ImageTarget name="markerA_2_221" size="0.600000 0.327313" />
+    <ImageTarget name="markerA_2_218" size="0.600000 0.595385" />
+    <ImageTarget name="markerA_2_204" size="0.500000 0.660609" />
+    <ImageTarget name="markerA_2_202" size="1.200000 1.084789" />
+    <ImageTarget name="markerA_2_201" size="1.500000 1.707889" />
+  </Tracking>
+</QCARConfig>

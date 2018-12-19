@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="markerC_1_Stairs" size="2.000000 1.968161" />
+    <ImageTarget name="markerB_1_Stairs2" size="0.500000 0.290128" />
+    <ImageTarget name="markerB_1_Stairs1" size="1.800000 2.258470" />
+    <ImageTarget name="markerB_1_Hall1" size="2.500000 2.828488" />
+    <ImageTarget name="markerB_1_1012" size="1.800000 1.758925" />
+    <ImageTarget name="markerB_1_108" size="1.800000 2.452860" />
+    <ImageTarget name="markerB_1_103" size="1.600000 1.846374" />
+    <ImageTarget name="markerB_1_101" size="1.600000 2.290423" />
+    <ImageTarget name="markerA_1_Studentensec" size="2.300000 1.747190" />
+    <ImageTarget name="markerA_1_Stairs3" size="1.800000 1.995349" />
+    <ImageTarget name="markerA_1_Stairs2" size="1.800000 2.043727" />
+    <ImageTarget name="markerA_1_Stairs1" size="1.400000 1.580249" />
+    <ImageTarget name="markerA_1_Hall2" size="1.600000 1.785022" />
+    <ImageTarget name="markerA_1_Hall1" size="2.000000 2.085840" />
+    <ImageTarget name="markerA_1_Foyer" size="1.800000 2.048587" />
+    <ImageTarget name="markerA_1_bib" size="2.000000 2.054113" />
+    <ImageTarget name="markerA_1_Audi7" size="2.000000 1.911151" />
+    <ImageTarget name="markerA_1_Audi6" size="1.800000 2.053287" />
+    <ImageTarget name="markerA_1_Audi5" size="1.400000 1.669254" />
+    <ImageTarget name="markerA_1_103" size="0.600000 0.548214" />
+  </Tracking>
+</QCARConfig>
