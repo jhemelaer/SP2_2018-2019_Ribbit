@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scenes\ContactButtonController.cs" />
     <Compile Include="Assets\Scenes\ContactUsController.cs" />
     <Compile Include="Assets\Scenes\LocateMeButtonController.cs" />
+    <Compile Include="Assets\Scenes\LogOutController.cs" />
     <Compile Include="Assets\Scenes\Login.cs" />
     <Compile Include="Assets\Scenes\LokaalReservatieButtonController.cs" />
     <Compile Include="Assets\Scenes\Mail.cs" />
