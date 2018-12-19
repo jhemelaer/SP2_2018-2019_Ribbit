@@ -28,6 +28,10 @@ public class Login : MonoBehaviour
     public void LoginKnop()
     {
 
+        /* Both dictionaries contain credentials for students and teachers.
+         * Originally, we would work with an Active Directory containing the credentials, but there were some problems with that.
+         * Please read the documents to get the full explenation. */
+
         studentenGegevens.Add("malke.boulanger", "Puc55!");
         studentenGegevens.Add("kKarle.claretha", "Avi15!");
         studentenGegevens.Add("jeraldine.omara", "Juq59!");
@@ -39,12 +43,12 @@ public class Login : MonoBehaviour
 
         foreach (KeyValuePair<string, string> entry in studentenGegevens)
         {
-            if (entry.Key == Gebruikersnaam && entry.Value == Wachtwoord)
+            if (entry.Key == Gebruikersnaam && entry.Value == Wachtwoord) // If the credentials correspond to the stored credentials.
             {
                 Persoon.naam = entry.Key;
                 Persoon.typeUser = Type.STUDENT;
 
-                //redirect naar studentenmenu
+                //redirect to studentenmenu
                 SceneManager.LoadScene("MenuStudentScene");
             }
         }
@@ -56,14 +60,14 @@ public class Login : MonoBehaviour
                 Persoon.naam = entry.Key;
                 Persoon.typeUser = Type.DOCENT;
 
-                //redirect naar docentenmenu
+                //redirect to docentenmenu
                 SceneManager.LoadScene("MenuDocentScene");
             }
         }
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() // Function is used to make the form responsive
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
