@@ -389,8 +389,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -209, y: 61}
-  m_SizeDelta: {x: 229, y: 30}
+  m_AnchoredPosition: {x: -137.75, y: 61}
+  m_SizeDelta: {x: 371.5, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1178381862
 MonoBehaviour:
@@ -424,7 +424,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Download uw kalender: \n"
+  m_Text: 'Download uw kalender via Desiderius:
+
+'
 --- !u!222 &1178381863
 CanvasRenderer:
   m_ObjectHideFlags: 0

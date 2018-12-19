@@ -81,16 +81,16 @@
   <ItemGroup>
     <Compile Include="Assets\Scenes\ContactButtonController.cs" />
     <Compile Include="Assets\Scenes\ContactUsController.cs" />
-    <Compile Include="Assets\Scenes\LessenRoosterFormController.cs" />
+    <Compile Include="Assets\Scenes\IcalController.cs" />
     <Compile Include="Assets\Scenes\LocateMeButtonController.cs" />
     <Compile Include="Assets\Scenes\Login.cs" />
     <Compile Include="Assets\Scenes\LokaalReservatieButtonController.cs" />
+    <Compile Include="Assets\Scenes\Mail.cs" />
     <Compile Include="Assets\Scenes\MijnLessenroosterController.cs" />
     <Compile Include="Assets\Scenes\NavigateButtonController.cs" />
+    <Compile Include="Assets\Scenes\Persoon.cs" />
     <Compile Include="Assets\Scenes\SettingsButtonController.cs" />
     <Compile Include="Assets\Scenes\SettingsController.cs" />
-    <Compile Include="Assets\Scenes\TestWWW.cs" />
-    <Compile Include="Assets\Scenes\WWWFormTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
