@@ -59,4 +59,20 @@ public class ContactUsController : MonoBehaviour
             smtpServer.Send(mail);
         }
     }
+
+    public void onClickBack()
+    {
+        if (Persoon.typeUser == Type.DOCENT)
+        {
+            SceneManager.LoadScene("MenuDocentScene");
+        }
+        else if (Persoon.typeUser == Type.STUDENT) 
+        {
+            SceneManager.LoadScene("MenuStudentScene");
+        }
+        else
+        {
+            SceneManager.LoadScene("LoginScene");
+        }
+    }
 }
