@@ -1,14 +1,13 @@
 ﻿using System.Collections;
-using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class MijnLessenroosterButtonController : MonoBehaviour {
-
-
- public void goToLessenRooster()
-    {
+public class MijnLessenroosterController : MonoBehaviour {
+    //this code navigates to the the ical download and tutorial
+     public void GoToIcal() {
         SceneManager.LoadScene("OpenIcalScene");
-    }
+        }
 
-
+	
 }
