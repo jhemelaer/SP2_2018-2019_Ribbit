@@ -12,40 +12,36 @@ using UnityEngine.SceneManagement;
 
 public class Mail : MonoBehaviour
 {
-
-    //Code voormiddag
-
-    public InputField naam;
     public InputField lokaal;
-    public Toggle isStudent;
-    public Toggle isDocent;
     public string rol;
     public string naamGebruiker;
     public string aangevraagdLokaal;
 
     public void sendmail_start()
     {
-        StartCoroutine(sendmail());
+        StartCoroutine(sendmail()); // A coroutine makes it possible for a function to execute over multiple frames. In fact, a coroutine stops the execution of the code and temporarily gives back control to Unity.
     }
 
     public IEnumerator sendmail()
     {
         yield return new WaitForSeconds(0.0f);
-       
-        if(Persoon.naam == "" || Persoon.naam == null || Persoon.typeUser == Type.NIET_INGELOGD)
+
+        if (Persoon.naam == "" || Persoon.naam == null || Persoon.typeUser == Type.NIET_INGELOGD)
         {
             SceneManager.LoadScene("LoginScene");
         }
 
-        if(Persoon.naam != "" && Persoon.naam != null && Persoon.typeUser != Type.NIET_INGELOGD)
+        if (Persoon.naam != "" && Persoon.naam != null && Persoon.typeUser != Type.NIET_INGELOGD)
         {
             naamGebruiker = Persoon.naam;
             rol = Persoon.typeUser.ToString();
 
-            if(lokaal.text != "" && lokaal.text != null)
+            if (lokaal.text != "" && lokaal.text != null)
             {
-               aangevraagdLokaal = lokaal.text;
+                aangevraagdLokaal = lokaal.text;
             }
+
+            // The next part of code sends us an e-mail
 
             MailMessage mail = new MailMessage();
 
