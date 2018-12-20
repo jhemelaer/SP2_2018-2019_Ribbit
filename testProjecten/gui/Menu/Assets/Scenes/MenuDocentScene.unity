@@ -554,9 +554,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 502305359}
-          m_MethodName: set_name
-          m_Mode: 5
+        - m_Target: {fileID: 426567451}
+          m_MethodName: goToLokaalReservatie
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
