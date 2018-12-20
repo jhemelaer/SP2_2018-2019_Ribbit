@@ -2,7 +2,8 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class ContactButtonController : MonoBehaviour {
+public class ContactButtonController : MonoBehaviour
+{
 
     public void goToContact()
     {
