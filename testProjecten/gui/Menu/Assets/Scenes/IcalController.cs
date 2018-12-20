@@ -13,7 +13,7 @@ public class IcalController : MonoBehaviour {
 
 //this function will open the video to set the ical file 	
 	public void StartVideo () {
-        Application.OpenURL("https://youtu.be/KqCFhz_p9Rk");
+        Application.OpenURL("https://youtu.be/g_yS9mi4RXk");
     }
     
 
