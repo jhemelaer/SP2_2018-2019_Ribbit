@@ -379,9 +379,8 @@ GameObject:
   - component: {fileID: 413792222}
   - component: {fileID: 413792224}
   - component: {fileID: 413792223}
-  - component: {fileID: 413792225}
-  - component: {fileID: 413792227}
   - component: {fileID: 413792226}
+  - component: {fileID: 413792225}
   m_Layer: 5
   m_Name: ContactImage
   m_TagString: Untagged
@@ -448,17 +447,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 413792221}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbf9240fb29969f4380432f8c0bdb94a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &413792226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 413792221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -467,7 +455,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 502305361}
+        - m_Target: {fileID: 413792226}
           m_MethodName: goToContact
           m_Mode: 1
           m_Arguments:
@@ -481,7 +469,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!114 &413792227
+--- !u!114 &413792226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -810,6 +798,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1b0ba8fcd776844bc45ef74a7df4c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
+  bericht: {fileID: 0}
 --- !u!114 &502305361
 MonoBehaviour:
   m_ObjectHideFlags: 0
