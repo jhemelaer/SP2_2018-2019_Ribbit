@@ -1,21 +1,13 @@
 ﻿using System.Collections;
-using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class MijnLessenroosterButtonController : MonoBehaviour {
+public class MijnLessenroosterController : MonoBehaviour {
+    //this code navigates to the the ical download and tutorial
+     public void GoToIcal() {
+        SceneManager.LoadScene("OpenIcalScene");
+        }
 
-
-/*public IEnumerator ShowLessenrooster(){
-        // aan de hand van webscraping lessen rooster tonen 
-        // bron: https://docs.unity3d.com/ScriptReference/WWW.html
-        WWW www = new WWW(url);
-        Renderer renderer = GetComponent<Renderer>();
-        renderer.material.mainTexture = www.texture;
-        yield return www;
-       print(www);
-    }*/
-
-
-//overige functies mogen er bij
-
+	
 }

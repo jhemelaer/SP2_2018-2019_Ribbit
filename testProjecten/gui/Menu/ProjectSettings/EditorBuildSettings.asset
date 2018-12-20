@@ -22,4 +22,7 @@ EditorBuildSettings:
     guid: 08b5775c51cf2c7439c6acd23eaca1ea
   - enabled: 1
     path: Assets/Scenes/LokaalReservatieScene.unity
+    guid: 6f10753b63651b4448cecc6f87ac41ec
+  - enabled: 1
+    path: Assets/Scenes/OpenIcalScene.unity
     guid: 00000000000000000000000000000000
