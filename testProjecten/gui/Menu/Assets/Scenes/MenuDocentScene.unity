@@ -652,6 +652,8 @@ GameObject:
   - component: {fileID: 502305358}
   - component: {fileID: 502305357}
   - component: {fileID: 502305356}
+  - component: {fileID: 502305363}
+  - component: {fileID: 502305362}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -782,6 +784,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbf9240fb29969f4380432f8c0bdb94a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &502305362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 502305351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e2f7a1171ed8742a7bfdafc8133171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &502305363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 502305351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25680fd5213ca9f43ae166ad17342842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &519420028
@@ -936,7 +960,6 @@ GameObject:
   - component: {fileID: 586750997}
   - component: {fileID: 586750996}
   - component: {fileID: 586750995}
-  - component: {fileID: 586750999}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1033,17 +1056,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &586750999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 586750994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e915ddf844af4dd41b023bc5471ae9b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &732315122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,6 +1313,7 @@ GameObject:
   - component: {fileID: 1354728990}
   - component: {fileID: 1354728992}
   - component: {fileID: 1354728991}
+  - component: {fileID: 1354728993}
   m_Layer: 5
   m_Name: LessenroosterImage
   m_TagString: Untagged
@@ -1359,6 +1372,36 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1354728989}
+--- !u!114 &1354728993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1354728989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 502305362}
+          m_MethodName: GoToIcal
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1589189214
 GameObject:
   m_ObjectHideFlags: 0
