@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 780460746}
   - component: {fileID: 780460745}
   - component: {fileID: 780460744}
+  - component: {fileID: 780460747}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -186,7 +187,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 781913876}
+      - m_Target: {fileID: 780460747}
         m_MethodName: StartVideo
         m_Mode: 1
         m_Arguments:
@@ -232,6 +233,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 780460742}
+--- !u!114 &780460747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 780460742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc4f19b9fd765544949b4f57eb23e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &781913872
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,6 +712,7 @@ GameObject:
   - component: {fileID: 1739465910}
   - component: {fileID: 1739465909}
   - component: {fileID: 1739465908}
+  - component: {fileID: 1739465911}
   m_Layer: 5
   m_Name: DownloadKalenderButton
   m_TagString: Untagged
@@ -765,7 +778,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 781913876}
+      - m_Target: {fileID: 1739465911}
         m_MethodName: OpenDesiderius
         m_Mode: 1
         m_Arguments:
@@ -811,6 +824,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1739465906}
+--- !u!114 &1739465911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1739465906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc4f19b9fd765544949b4f57eb23e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1748017540
 GameObject:
   m_ObjectHideFlags: 0
