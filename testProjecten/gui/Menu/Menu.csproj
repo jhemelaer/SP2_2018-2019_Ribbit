@@ -79,7 +79,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\BackController.cs" />
-    <Compile Include="Assets\Scenes\BackController.cs" />
     <Compile Include="Assets\Scenes\ContactButtonController.cs" />
     <Compile Include="Assets\Scenes\ContactUsController.cs" />
     <Compile Include="Assets\Scenes\IcalController.cs" />
